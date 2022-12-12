@@ -16,10 +16,11 @@
   --green50: 18, 153, 97;
   --green60: 9, 133, 81;
   --red60: 207, 32, 47;
-  --line: rgba(var(--gray-60), 0.2);
   --background: rgb(var(--gray-0));
   --background-alternate: rgb(var(--gray-5));
   --foreground-muted: rgb(var(--gray-60));
+  --line: rgba(var(--gray-60), 0.2);
+  --line-heavy: rgba(var(--gray-60), 0.68);
   --negative: rgb(var(--red60));
   --positive: rgb(var(--green60));
   --primary: rgb(var(--blue-60));
@@ -81,6 +82,13 @@ a {
   display: inline;
 }
 
+.line {
+  flex: 1;
+  height: 1px;
+  margin-top: var(--spacing-5);
+  background-color: var(--line-heavy);
+}
+
 .flex-row-items-center {
   display: flex;
   align-items: center;
@@ -114,6 +122,11 @@ a {
 .text-left {
   text-align: left;
 }
+
+.text-center {
+  text-align: center;
+}
+
 .p-16-left {
   padding-left: 16px;
 }
@@ -798,6 +811,51 @@ a {
 }
 
 /* End of stats section styles */
+
+/* Start of Quickstart section styles */
+.quickstart {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: var(--spacing-8) 0px;
+}
+
+.quickstart-title {
+  margin: 0;
+  line-height: 48px;
+  font-size: 40px;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.quickstart-subtitle {
+  margin-top: var(--spacing-2);
+  line-height: 28px;
+  font-size: 16px;
+  color: var(--foreground-muted);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.quickstart-steps {
+  justify-content: space-between;
+  width: 80%;
+  margin-top: var(--spacing-8);
+  display: flex;
+}
+
+.step-title {
+  margin: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  font-size: 20px;
+  color: var(--foreground);
+  font-weight: 600;
+}
 
 /* Media query */
 

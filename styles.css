@@ -8,10 +8,16 @@
   --spacing-7: 56px;
   --blue-60: 0, 82, 255;
   --blue-70: 0, 75, 235;
+  --gray-0: 255, 255, 255;
   --gray-60: 91, 97, 110;
   --gray-100: 10, 11, 13;
-  --primary: rgb(var(--blue-60));
+  --green50: 18, 153, 97;
+  --green60: 9, 133, 81;
+  --red60: 207, 32, 47;
   --line: rgba(var(--gray-60), 0.2);
+  --negative: rgb(var(--red60));
+  --positive: rgb(var(--green60));
+  --primary: rgb(var(--blue-60));
 }
 
 *,
@@ -32,6 +38,50 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: inherit;
+}
+
+.static-layout {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1142px;
+  padding: var(--spacing-3) var(--spacing-7);
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.flex-row-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-items-start {
+  display: flex;
+  align-items: center;
+}
+
+.border-line:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.border-line {
+  border-bottom: 1px solid var(--line);
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-left {
+  text-align: left;
+}
+.p-16-left {
+  padding-left: 16px;
 }
 
 /* Begining of header styling */
@@ -131,15 +181,6 @@ a {
 
 /* End of header styling */
 
-.static-layout {
-  width: 100%;
-  overflow: hidden;
-  max-width: 1142px;
-  padding: var(--spacing-3) var(--spacing-7);
-  margin: 0 auto;
-  flex-shrink: 0;
-}
-
 /* Start of hero section styles */
 
 .hero-contents {
@@ -218,7 +259,7 @@ a {
   margin-left: var(--spacing-2);
 }
 
-.btn-container {
+.emailcta-btn {
   width: 100%;
   border-radius: 4px;
   color: #fff;
@@ -229,6 +270,12 @@ a {
   line-height: 1.15;
   background-color: var(--primary);
   border: 1px solid var(--primary);
+  transition: all 80ms ease-in-out;
+}
+
+.emailcta-btn:hover {
+  background-color: rgb(var(--blue-70));
+  border-color: rgb(var(--blue-70));
 }
 
 .btn-content {
@@ -260,3 +307,135 @@ a {
 }
 
 /* End of hero section styles */
+
+/* Asset table styles */
+.asset-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.asset-table {
+  width: 100%;
+  background: #fff;
+  border-spacing: 0px;
+  border-collapse: separate;
+  caption-side: top;
+  color: rgb(var(--gray-60));
+}
+
+.asset-thead {
+  border: medium none;
+}
+
+.asset-th:first-child {
+  padding-left: 32px;
+}
+
+.asset-th {
+  padding: 16px 48px 16px 0;
+  text-align: left;
+}
+
+.asset-th label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  width: auto;
+  line-height: 1.6;
+}
+
+.asset-tbody {
+  border: medium none;
+}
+
+.asset-tbody tr {
+  user-select: none;
+  background: var(--gray-0);
+}
+
+.asset-td-num:first-child {
+  padding-left: 32px;
+}
+
+.asset-td-num {
+  width: 85px;
+  position: relative;
+  padding: 14px 48px 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.asset-td-num span {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.asset-td-name-wrapper {
+  min-width: 140px;
+  padding: 14px 48px 14px 0;
+  cursor: pointer;
+  border-top: 1px solid var(--line);
+}
+
+.asset-td-name-wrapper a {
+  font-size: 18px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+}
+
+.td-img-wrapper {
+  width: 36px;
+}
+
+.td-name {
+  color: rgb(var(--gray-100));
+  font-weight: 500;
+}
+
+.price-column {
+  min-width: 132px;
+  padding: 14px 48px 14px 0;
+  border-top: 1px solid var(--line);
+  color: rgb(var(--gray-100));
+  font-weight: 500;
+}
+
+.change-column {
+  min-width: 100px;
+  padding: 14px 48px 14px 0;
+  border-top: 1px solid var(--line);
+  color: var(--negative);
+  font-weight: 500;
+}
+
+.chart-column {
+  min-width: 100px;
+  padding: 5px 25px 5px 5px;
+  border-top: 1px solid var(--line);
+}
+
+.trade-column {
+  min-width: 70px;
+  padding: 14px 48px 14px 32px;
+  border-top: 1px solid var(--line);
+}
+
+.trade-btn {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: 4px;
+  color: rgb(var(--gray-0));
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--positive);
+  border: 1px solid var(--positive);
+}
+
+.trade-btn:hover {
+  background-color: rgb(var(--green50));
+  border-color: rgb(var(--green50));
+}

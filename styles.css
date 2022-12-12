@@ -1,0 +1,129 @@
+:root {
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-7: 56px;
+    --blue-60: 0, 82, 255;
+    --primary: rgb(var(--blue-60));
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16x;
+    font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Begining of header styling */
+
+.header {
+    width: 100%;
+    height: 67px;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 1px solid rgb(236, 239, 241);
+    background: #fff;
+}
+
+.main-nav-wrapper {
+    display: flex;
+    max-width: 1180px;
+    align-items: stretch;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    min-height: 66px;
+    color: rgb(5, 15, 25);
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 2 1 0%;
+    padding-bottom: 3px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 6 1 0%;
+    box-sizing: border-box;
+}
+
+.navlink-item {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 18px;
+    line-height: 16px;
+    border-bottom: 4px solid transparent;
+}
+
+.navlink-item:hover {
+    border-bottom: 4px solid var(--primary);
+}
+
+.main-nav-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 var(--spacing-2);
+    flex: 2 1 0%;
+    box-sizing: border-box;
+}
+
+.btn-label {
+    padding: var(--spacing-2);
+    opacity: 1;
+    transition: color 0.15s ease-out;
+}
+
+.btn-label:hover {
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 10px 12px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 14px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    border: 1px solid var(--primary);
+}
+
+.btn:hover {
+    background-color: rgb(10, 70, 228);
+    border: 1px solid transparent;
+    transition: background-color 0.25s ease 0;
+}
+
+/* End of header styling */
+
+.static-layout {
+    width: 100%;
+    overflow: hidden;
+    max-width: 1142px;
+    padding: var(--spacing-3) var(--spacing-7);
+    margin: 0 auto;
+}

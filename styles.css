@@ -12,7 +12,7 @@
   --spacing-7: 56px;
   --spacing-8: 64px;
   --blue-60: 0, 82, 255;
-  --blue-70: 0, 75, 235;
+  --blue70: 0, 75, 235;
   --gray-0: 255, 255, 255;
   --gray-5: 238, 240, 243;
   --gray-60: 91, 97, 110;
@@ -226,7 +226,7 @@ textarea {
   line-height: 40px;
   font-weight: bold;
   box-sizing: border-box;
-  color: rgb(var(--blue-70));
+  color: rgb(var(--blue70));
 }
 
 .center-wrapper {
@@ -297,6 +297,11 @@ textarea {
   cursor: pointer;
 }
 
+.hero-pill:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .hero-title {
   max-width: 425px;
   font-size: 62px;
@@ -364,8 +369,8 @@ textarea {
 }
 
 .emailcta-btn:hover {
-  background-color: rgb(var(--blue-70));
-  border-color: rgb(var(--blue-70));
+  background-color: rgb(var(--blue70));
+  border-color: rgb(var(--blue70));
 }
 
 .btn-content {
@@ -595,7 +600,7 @@ textarea {
 }
 
 .link:hover {
-  color: rgb(var(--blue-70));
+  color: rgb(var(--blue70));
 }
 
 .common-card {
@@ -790,7 +795,7 @@ textarea {
 }
 
 .feat-link:hover {
-  color: rgb(var(--blue-70));
+  color: rgb(var(--blue70));
 }
 
 /*  End of overview section style */
@@ -949,6 +954,12 @@ textarea {
   color: #113355;
   text-decoration: none;
   max-width: 200px;
+}
+
+.footer-link:hover {
+  color: rgb(var(--blue70));
+  transition: color ease 0.25s;
+  text-decoration: underline;
 }
 
 .resources-link span {

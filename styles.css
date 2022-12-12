@@ -63,7 +63,6 @@ textarea {
 }
 
 .static-layout {
-  width: 100%;
   overflow: hidden;
   max-width: 1142px;
   padding: var(--spacing-3) var(--spacing-7);
@@ -482,6 +481,12 @@ textarea {
   align-items: center;
 }
 
+.asset-name-and-symbol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .img-wrapper {
   width: 36px;
 }
@@ -497,6 +502,9 @@ textarea {
   border-top: 1px solid var(--line);
   color: rgb(var(--gray-100));
   font-weight: 500;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
 }
 
 .change-column {
@@ -621,6 +629,12 @@ textarea {
   opacity: 1;
   z-index: 1;
   position: relative;
+}
+
+.common-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coin-name {
@@ -1021,12 +1035,119 @@ textarea {
   }
 }
 
-@media not all and (max-width: 768px) {
+@media (max-width: 768px) {
   .feat-card {
     width: calc((100% / 3) - var(--spacing-1));
   }
 
   .language-selector {
     margin-right: 16px;
+  }
+
+  .asset-name-and-symbol {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .form-cta-container {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .banner-container {
+    flex-direction: column;
+    height: auto;
+    overflow: unset;
+  }
+
+  .common-card-container {
+    min-width: 300px;
+  }
+
+  .common-card {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 0px;
+  }
+
+  .common-card-wrapper {
+    justify-content: start;
+  }
+
+  .coin-symbol {
+    display: none;
+  }
+
+  .coin-name {
+    width: min-content;
+  }
+
+  .feats-wrapper {
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: var(--spacing-8);
+    align-items: center;
+  }
+
+  .feat-card {
+    width: calc((100% / 2) - var(--spacing-1));
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .pagelinks-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .pagelinks-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .quickstart-steps {
+    flex-direction: column;
+  }
+
+  .quickstart {
+    text-align: center;
+  }
+
+  .stats-wrapper {
+    flex-direction: column;
+  }
+
+  .stat {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .feat-card {
+    width: 100%;
+  }
+
+  .feat-wrapper {
+    text-align: center;
+  }
+
+  .overview-feature {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .feature-icon {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: var(--spacing-3);
+  }
+
+  .overview {
+    text-align: center;
   }
 }

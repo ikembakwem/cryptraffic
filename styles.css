@@ -6,6 +6,7 @@
   --spacing-5: 24px;
   --spacing-6: 32px;
   --spacing-7: 56px;
+  --spacing-8: 64px;
   --blue-60: 0, 82, 255;
   --blue-70: 0, 75, 235;
   --gray-0: 255, 255, 255;
@@ -15,6 +16,8 @@
   --green60: 9, 133, 81;
   --red60: 207, 32, 47;
   --line: rgba(var(--gray-60), 0.2);
+  --background: rgb(var(var(--gray-0)));
+  --foreground-muted: rgb(var(--gray-60));
   --negative: rgb(var(--red60));
   --positive: rgb(var(--green60));
   --primary: rgb(var(--blue-60));
@@ -47,6 +50,14 @@ a {
   padding: var(--spacing-3) var(--spacing-7);
   margin: 0 auto;
   flex-shrink: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
 .no-padding {
@@ -110,6 +121,9 @@ a {
   width: 100%;
 }
 
+.w-4 {
+  width: var(--spacing-4);
+}
 .btn {
   padding: 10px 12px;
   color: #fff;
@@ -576,4 +590,95 @@ a {
   margin-left: 24px;
   color: var(--positive);
   font-weight: 600;
+}
+
+/* End of banner section */
+
+.overview {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.overview-title {
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: var(--spacing-1);
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.overview-subtitle {
+  color: var(--foreground-muted);
+  text-align: center;
+}
+
+.app-features {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: var(--spacing-4);
+}
+
+.overview-l {
+  margin-top: var(--spacing-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-feature {
+  margin-bottom: var(--spacing-5);
+  display: flex;
+}
+
+.feature-icon {
+  margin-top: -8px;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  margin-right: var(--spacing-4);
+  background-color: var(--background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 16px rgba(218, 225, 233, 0.557943);
+}
+
+.feature-title {
+  margin-top: 0px;
+  margin-bottom: var(--spacing-2);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.feature-text {
+  margin: 0px;
+  line-height: 1.6;
+  color: var(--foreground-muted);
+}
+
+.overview-r {
+  max-width: 700px;
+}
+
+/* Media query */
+
+@media all and (min-width: 1171px) {
+  .app-features {
+    margin-top: var(--spacing-8);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .overview-l {
+    margin-right: var(--spacing-2);
+    margin-top: 0;
+  }
 }
